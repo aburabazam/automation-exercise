@@ -1,4 +1,20 @@
-name: Tesing workflow
+name: Testing Workflow Github Actions
+
+on: [push]
+jobs:
+  style_check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-python@v4
+        with:
+          python-version: 3.8
+      - name: "Install style checker"
+        run: |
+          python -m pip install --upgrade pip
+          pip install black
+      - name: "Run style check"
+        run: black --check .name: Tesing workflow
 
 on: [push]
 
