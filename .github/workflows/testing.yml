@@ -56,4 +56,4 @@ jobs:
         with:
           name: coverage
           path: coverage.xml
-          retention-days: 14
+          retention-days: 1
